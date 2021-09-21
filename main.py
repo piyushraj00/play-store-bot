@@ -24,13 +24,13 @@ async def filter_all(bot, update):
     reply_markup = InlineKeyboardMarkup(
         [
            [InlineKeyboardButton(text="♻️ Updates Channel", url: "https://t.me/YouTubeVideoDownloaderService"),[InlineKeyboardButton(text="💠 Support Group", url: "https://t.me/VCMusicGroup")], [InlineKeyboardButton(text="⚜️ Search Here ⚜️", switch_inline_query_current_chat="")],
-            [InlineKeyboardButton(text="🔷 Search Another Chat 🔷", switch_inline_query="")],[InlineKeyboardButton(text="🖥️ Creator", url: "https://t.me/TronManTRONIC")]
+            [InlineKeyboardButton(text="🔷 Search Another Chat 🔷", switch_inline_query="")]
         ]
     )
     await update.reply_text(
         text=text,
         reply_markup=reply_markup,
-        disable_web_page_preview=True,
+        disable_web_page_preview=True, Hu
         quote=True
     )
 
