@@ -4,18 +4,16 @@
 # All rights reserved by FayasNoushad
 # License -> https://github.com/FayasNoushad/Play-Store-Bot/blob/main/LICENSE
 
-import os
+import os, logging, asyncio
 import play_scraper
 from pyrogram import Client, filters
 from pyrogram.types import *
 
 
-Bot = Client(
-    "Play-Store-Bot",
-    bot_token = os.environ["BOT_TOKEN"],
-    api_id = int(os.environ["API_ID"]),
-    api_hash = os.environ["API_HASH"]
-)
+api_id = int(os.environ.get("APP_ID"))
+api_hash = os.environ.get("API_HASH")
+bot_token = os.environ.get("BOT_TOKEN")
+Bot = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
 
 @Bot.on_message(filters.private & filters.all)
