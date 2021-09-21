@@ -10,10 +10,9 @@ from pyrogram import Client, filters
 from pyrogram.types import *
 
 
-api_id = int(os.environ.get("APP_ID"))
-api_hash = os.environ.get("API_HASH")
-bot_token = os.environ.get("BOT_TOKEN")
-Bot = Client("Play-Store-Bot", api_id, api_hash).start(bot_token=bot_token)
+Bot = Client("Play-Store-Bot",api_id = int(os.environ.get("3666080"))
+api_hash = os.environ.get("e28318de9a7e6d898e3a78d4964bfd41")
+bot_token = os.environ.get("1958253062:AAH5eCPsrU7vMXz7e3iDsK83TjKvJW-oMQg")
 
 
 @Bot.on_message(filters.private & filters.all)
