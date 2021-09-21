@@ -10,12 +10,10 @@ from pyrogram import Client, filters
 from pyrogram.types import *
 
 
-Bot = Client(
-    "Play-Store-Bot",
-    bot_token = os.environ["1958253062:AAH5eCPsrU7vMXz7e3iDsK83TjKvJW-oMQg"],
-    api_id = int(os.environ["3666080"]),
-    api_hash = os.environ["e28318de9a7e6d898e3a78d4964bfd41"]
-)
+Bot = Client('Play-Store-Bot', api_id, api_hash).start(bot_token=bot_token),api_id = int(os.environ.get("APP_ID"))
+api_hash = os.environ.get("API_HASH")
+bot_token = os.environ.get("BOT_TOKEN")
+
 @Bot.on_message(filters.private & filters.all)
 async def filter_all(bot, update):
     text = "**Hi,\n\nIam A Simple Play Store Search Bot. I Can Search All From PlayStore. I Can Also Find App Details. Use Me Inline Made With ❤ BY @YouTubeVideoDownloaderService\n\n"
