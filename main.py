@@ -23,8 +23,7 @@ async def filter_all(bot, update):
     text = "**Hi,\n\nIam A Simple Play Store Search Bot. I Can Search All From PlayStore. I Can Also Find App Details. Use Me Inline Made With ❤ BY @YouTubeVideoDownloaderService\n\n"
     reply_markup = InlineKeyboardMarkup(
         [
-           [InlineKeyboardButton(text="♻️ Updates Channel", url: "https://t.me/YouTubeVideoDownloaderService"),[InlineKeyboardButton(text="💠 Support Group", url: "https://t.me/VCMusicGroup")], [InlineKeyboardButton(text="⚜️ Search Here ⚜️", switch_inline_query_current_chat="")],
-            [InlineKeyboardButton(text="🔷 Search Another Chat 🔷", switch_inline_query="")]
+           [InlineKeyboardButton(text="♻️ Updates Channel", url: "https://t.me/YouTubeVideoDownloaderService"),[InlineKeyboardButton(text="💠 Support Group", url: "https://t.me/VCMusicGroup")], [InlineKeyboardButton(text="⚜️ Search Here ⚜️", switch_inline_query_current_chat="")],[InlineKeyboardButton(text="🔷 Search Another Chat 🔷", switch_inline_query="")]
         ]
     )
     await update.reply_text(
