@@ -20,11 +20,11 @@ Bot = Client(
 
 @Bot.on_message(filters.private & filters.all)
 async def filter_all(bot, update):
-    text = "Search play store apps using below buttons.\n\nMade by @FayasNoushad"
+    text = "**Hi,\n\nIam A Simple Play Store Search Bot. I Can Search All From PlayStore. I Can Also Find App Details. Use Me Inline Made With ❤ BY @YouTubeVideoDownloaderService\n\n"
     reply_markup = InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton(text="Search here", switch_inline_query_current_chat="")],
-            [InlineKeyboardButton(text="Search in another chat", switch_inline_query="")]
+           [InlineKeyboardButton(text="♻️ Updates Channel", url: "https://t.me/YouTubeVideoDownloaderService"),[InlineKeyboardButton(text="💠 Support Group", url: "https://t.me/VCMusicGroup")], [InlineKeyboardButton(text="⚜️ Search Here ⚜️", switch_inline_query_current_chat="")],
+            [InlineKeyboardButton(text="🔷 Search Another Chat 🔷", switch_inline_query="")],[InlineKeyboardButton(text="🖥️ Creator", url: "https://t.me/TronManTRONIC")]
         ]
     )
     await update.reply_text(
@@ -40,16 +40,16 @@ async def search(bot, update):
     results = play_scraper.search(update.query)
     answers = []
     for result in results:
-        details = "**Title:** `{}`".format(result["title"]) + "\n" \
-        "**Description:** `{}`".format(result["description"]) + "\n" \
-        "**App ID:** `{}`".format(result["app_id"]) + "\n" \
-        "**Developer:** `{}`".format(result["developer"]) + "\n" \
-        "**Developer ID:** `{}`".format(result["developer_id"]) + "\n" \
-        "**Score:** `{}`".format(result["score"]) + "\n" \
-        "**Price:** `{}`".format(result["price"]) + "\n" \
-        "**Full Price:** `{}`".format(result["full_price"]) + "\n" \
-        "**Free:** `{}`".format(result["free"]) + "\n" \
-        "\n" + "Made by @FayasNoushad"
+        details = "**🔷 Title:** `{}`".format(result["title"]) + "\n" \
+        "**♻️ Description:** `{}`".format(result["description"]) + "\n" \
+        "**🖥️ App ID:** `{}`".format(result["app_id"]) + "\n" \
+        "**⚜️ Developer:** `{}`".format(result["developer"]) + "\n" \
+        "**👨🏻‍💻 Developer ID:** `{}`".format(result["developer_id"]) + "\n" \
+        "**💯 Score:** `{}`".format(result["score"]) + "\n" \
+        "**💰 Price:** `{}`".format(result["price"]) + "\n" \
+        "**💲Full Price:** `{}`".format(result["full_price"]) + "\n" \
+        "**🆓 Free:** `{}`".format(result["free"]) + "\n" \
+        "\n" + " Made With ❤ BY @YouTubeVideoDownloaderService"
         reply_markup = InlineKeyboardMarkup(
             [[InlineKeyboardButton(text="Play Store", url="https://play.google.com"+result["url"])]]
         )
