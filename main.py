@@ -4,17 +4,18 @@
 # All rights reserved by FayasNoushad
 # License -> https://github.com/FayasNoushad/Play-Store-Bot/blob/main/LICENSE
 
-import os, logging, asyncio
+import os
 import play_scraper
 from pyrogram import Client, filters
 from pyrogram.types import *
 
 
-Bot = Client("Play-Store-Bot",api_id = int(os.environ.get("3666080"))
-api_hash = os.environ.get("e28318de9a7e6d898e3a78d4964bfd41")
-bot_token = os.environ.get("1958253062:AAH5eCPsrU7vMXz7e3iDsK83TjKvJW-oMQg")
-
-
+Bot = Client(
+    "Play-Store-Bot",
+    bot_token = os.environ["1958253062:AAH5eCPsrU7vMXz7e3iDsK83TjKvJW-oMQg"],
+    api_id = int(os.environ["3666080"]),
+    api_hash = os.environ["e28318de9a7e6d898e3a78d4964bfd41"]
+)
 @Bot.on_message(filters.private & filters.all)
 async def filter_all(bot, update):
     text = "**Hi,\n\nIam A Simple Play Store Search Bot. I Can Search All From PlayStore. I Can Also Find App Details. Use Me Inline Made With ❤ BY @YouTubeVideoDownloaderService\n\n"
